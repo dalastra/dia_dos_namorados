@@ -59,13 +59,14 @@ body{
     top:0;
     left:0;
     z-index:0;
+    opacity: 0.1;
 }
 
 
 
 
 .titulo{
-    width:420px;
+    width:440px;
     margin-bottom:50px;
 }
 
@@ -86,20 +87,23 @@ body{
 }
 
 .foto1{
-    left:20px;
-    top:10px;
+    width:450px;
+    left:-40px;
+    top:-60px;
     transform:rotate(-8deg);
 }
 
 .foto2{
+    width:500px;
     left:220px;
-    top:0;
+    top: -20px;
     transform:rotate(8deg);
 }
 
 .foto3{
-    left:150px;
-    top:120px;
+    width:500px;
+    left:78px;
+    top:110px;
     z-index:10;
 }
 
@@ -125,10 +129,10 @@ body{
 }
 
 .folha-top{
-    width:430px;
+    width:410px;
 
-    top:630px;
-    left:315px;
+    top:640px;
+    left:335px;
 }
 
 .folha-bottom{

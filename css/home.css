@@ -1,0 +1,462 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    color:#fff;
+
+    background:
+    linear-gradient(
+        rgba(0,120,110,.85),
+        rgba(0,90,80,.95)
+    ),
+    url("../assets/fundologin.png");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.topbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:#0ba392;
+    padding:18px 0;
+
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+}
+
+.navbar a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    font-size:14px;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    opacity:.8;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:750px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-container{
+    width:1100px;
+    max-width:95%;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding-top:90px;
+}
+
+/* =========================
+   POLAROIDS
+========================= */
+
+.polaroids{
+    position:relative;
+    width:600px;
+    height:400px;
+}
+
+.foto{
+    position:absolute;
+    transition:.3s ease;
+}
+
+.foto:hover{
+    transform:scale(1.04);
+}
+
+.foto1{
+    width:240px;
+    left:0;
+    top:20px;
+    transform:rotate(-12deg);
+}
+
+.foto2{
+    width:240px;
+    right:40px;
+    top:0;
+    transform:rotate(10deg);
+}
+
+.foto3{
+    width:270px;
+    left:150px;
+    top:120px;
+    z-index:10;
+}
+
+/* =========================
+   TEXTO HERO
+========================= */
+
+.hero-text{
+    max-width:450px;
+}
+
+.hero-text h1{
+    font-size:64px;
+    line-height:1;
+    font-weight:800;
+}
+
+.hero-text h3{
+    margin-top:15px;
+    font-size:20px;
+    font-weight:600;
+}
+
+.hero-logo{
+    width:120px;
+    margin:20px 0;
+}
+
+.btn-historia{
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:14px 26px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.2);
+
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-historia:hover{
+    background:rgba(255,255,255,.3);
+}
+
+/* =========================
+   FOLHAS
+========================= */
+
+.leaf-left,
+.leaf-right{
+    position:absolute;
+    bottom:0;
+    width:220px;
+    z-index:5;
+}
+
+.leaf-left{
+    left:0;
+}
+
+.leaf-right{
+    right:0;
+}
+
+/* =========================
+   PLAYER
+========================= */
+
+.music-player{
+    display:flex;
+    justify-content:center;
+
+    margin-top:-70px;
+
+    position:relative;
+    z-index:50;
+}
+
+.player-card{
+    width:900px;
+    max-width:95%;
+
+    background:#007f72;
+
+    padding:30px;
+
+    border-radius:40px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.25);
+}
+
+.player-cover{
+    width:100%;
+    height:340px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+}
+
+.song-info{
+    margin-top:20px;
+}
+
+.song-info h2{
+    font-size:34px;
+    font-weight:700;
+}
+
+.song-info span{
+    opacity:.85;
+}
+
+.progress-bar{
+    width:100%;
+    height:4px;
+
+    background:rgba(255,255,255,.25);
+
+    margin-top:20px;
+
+    border-radius:999px;
+}
+
+.progress{
+    width:45%;
+    height:100%;
+
+    background:#fff;
+
+    border-radius:999px;
+}
+
+.controls{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:25px;
+}
+
+.controls button{
+    border:none;
+    background:none;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:22px;
+}
+
+.play-button{
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    background:#fff !important;
+
+    color:#007f72 !important;
+
+    font-size:24px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-section{
+    padding:80px 0;
+}
+
+.timeline-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.timeline-title span{
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.timeline-title h2{
+    font-size:60px;
+    font-weight:800;
+}
+
+.timeline{
+    position:relative;
+
+    width:1100px;
+    max-width:95%;
+
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:0;
+    bottom:0;
+
+    width:4px;
+
+    background:#fff;
+}
+
+.timeline-item{
+    position:relative;
+
+    width:50%;
+
+    padding:20px 40px;
+
+    margin-bottom:40px;
+}
+
+.timeline-item.left{
+    text-align:right;
+}
+
+.timeline-item.right{
+    left:50%;
+}
+
+.timeline-item::after{
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+    height:18px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    top:25px;
+}
+
+.timeline-item.left::after{
+    right:-9px;
+}
+
+.timeline-item.right::after{
+    left:-9px;
+}
+
+.timeline-card{
+    display:inline-block;
+
+    background:#006f65;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    min-width:260px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.25);
+}
+
+.timeline-card h3{
+    margin-top:8px;
+    font-size:22px;
+}
+
+.date{
+    font-size:12px;
+    opacity:.8;
+}
+
+.image-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.image-card img{
+    width:90px;
+    height:90px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:900px){
+
+    .hero-container{
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+    }
+
+    .timeline::before{
+        left:20px;
+    }
+
+    .timeline-item,
+    .timeline-item.right{
+        width:100%;
+        left:0;
+
+        text-align:left;
+
+        padding-left:60px;
+    }
+
+    .timeline-item::after{
+        left:11px !important;
+    }
+
+    .polaroids{
+        width:100%;
+        max-width:500px;
+    }
+
+    .hero-text h1{
+        font-size:48px;
+    }
+}
