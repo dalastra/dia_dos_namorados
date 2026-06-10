@@ -14,7 +14,7 @@ html{
 
 body{
     font-family: Inter, Helvetica, sans-serif;
-    background:#08b8a8;
+    background:#62807d;
     color:rgb(255, 255, 255);
     overflow-x:hidden;
 }
@@ -36,7 +36,7 @@ body{
 
     position:sticky;
     top:0;
-    z-index:999;
+    z-index:99999;
 }
 
 .navbar nav{
@@ -62,7 +62,7 @@ body{
 .hero{
     position:relative;
     height:370px;
-    overflow:hidden;
+    overflow:visible;
 }
 
 .hero-bg{
@@ -119,19 +119,19 @@ body{
 
 .polaroid-1{
     left: -100px;;
-    top:-100px;
+    top:-50px;
     transform:rotate(-8deg);
 }
 
 .polaroid-2{
     right:-80px;
-    top: -70px;
+    top: -20px;
     transform:rotate(7deg);
 }
 
 .polaroid-3{
     left:20px;
-    top:20px;
+    top:40px;
     z-index:3;
 }
 
@@ -179,31 +179,40 @@ body{
     color:white;
     text-decoration:none;
     font-weight:bold;
-}
 
+    cursor:pointer;
+
+    transition:.3s;
+}
+.btn-story:hover{
+    transform:translateY(-3px);
+    background:#008C76;
+}
 /* =========================
    FOLHAS
 ========================= */
 
 .folha{
     position:absolute;
-    z-index:20;
+    z-index: 999;
 }
 
 .folha-left{
-    width:340px;
+    width:630px;
 
-    bottom:-40px;
-    left:-40px;
+    bottom:-170px;
+    left:-230px;
+    z-index: 999;
 }
+
 
 .folha-right{
-    width:340px;
+    width:425px;
 
-    bottom:-40px;
-    right:-40px;
+    bottom: -100px;
+    right:0px;
+    z-index: 999;
 }
-
 /* =========================
    PLAYER
 ========================= */
@@ -294,14 +303,14 @@ body{
 
     background:
         linear-gradient(
-            rgba(0,120,110,.78),
-            rgba(104, 167, 161, 0.78)
+            rgba(0, 210, 177, 0.50),
+            rgba(0, 108, 91, 0.50)
         ),
         url("../assets/fundolinhadotempo.png");
 
+    
     background-size:cover;
     background-position:center;
-    background-attachment:fixed;
 }
 
 .timeline-section h3{
@@ -487,13 +496,15 @@ body{
     text-decoration:none;
     font-weight:bold;
 
+    cursor:pointer;
+
     transition:.3s;
 }
 
 .btn-back:hover{
     transform:translateY(-3px);
 
-    background:#00d8c7;
+    background:#008C76;
 }
 
 /* =========================
@@ -590,4 +601,19 @@ body{
     cursor:pointer;
 
     accent-color: #ffffff;
+}
+
+.titulo-container{
+    display:flex;
+    align-items:flex-end;
+    gap:20px;
+}
+
+.titulo-namorados{
+    width:360px;
+}
+
+.pascal{
+    width:40px;
+    margin-bottom:60px;
 }
