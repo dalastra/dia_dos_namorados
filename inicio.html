@@ -1,205 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
 
-  <title>Feliz Dia dos Namorados</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/home.css">
 </head>
-
 <body>
 
-  <header class="topbar">
-    <nav class="navbar">
-      <a href="#inicio">Início</a>
-      <a href="#timeline">Linha do Tempo</a>
-      <a href="#pravoce">Pra você</a>
-    </nav>
-  </header>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <nav>
+            <a href="inicio.html">Início</a>
+            <a href="#timeline">Linha do Tempo</a>
+            <a href="pravc.html">Pra você</a>
+        </nav>
+    </header>
 
-  <section id="inicio" class="hero">
+    <!-- HERO -->
+    <section class="hero">
 
-    <div class="hero-overlay"></div>
+        <img src="assets/fundologin.png" class="hero-bg">
 
-    <img src="assets/leaf-left.png" class="leaf-left" alt="">
-    <img src="assets/leaf-right.png" class="leaf-right" alt="">
+        <div class="hero-content">
 
-    <div class="hero-container">
+            <div class="hero-polaroids">
 
-      <div class="polaroids">
+                <img src="assets/fotoesquerdapolaroid.png" class="polaroid polaroid-1">
+                <img src="assets/fotodireitapolaroid.png" class="polaroid polaroid-2">
+                <img src="assets/fotocentropolaroid.png" class="polaroid polaroid-3">
 
-        <div class="polaroid polaroid-1">
-          <img src="assets/polaroid1.jpg" alt="">
+            </div>
+
+            <div class="hero-text">
+
+                <h1>
+                    FELIZ DIA DOS<br>
+                    NAMORADOS
+                </h1>
+
+                <h2>
+                    NOSSO PRIMEIRO DIA 12 JUNTOS!
+                </h2>
+
+                <div class="pascal-area">
+                    <img src="assets/pascal.png">
+                </div>
+
+                <a href="#timeline" class="btn-story">
+                    Ler nossa história ♡
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="polaroid polaroid-2">
-          <img src="assets/polaroid2.jpg" alt="">
+        <img src="assets/folhaesquerda.png" class="folha folha-left">
+        <img src="assets/folhadireita.png" class="folha folha-right">
+
+    </section>
+
+    <!-- PLAYER -->
+    <section class="music-section">
+
+        <div class="music-card">
+
+            <img
+                src="assets/outravida.png"
+                class="music-cover"
+            >
+
+            <div class="music-info">
+
+                <h2>Outra Vida</h2>
+                <p>Armandinho</p>
+
+            </div>
+
+            <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="progress-bar"
+            >
+
+            <div class="music-controls">
+
+                <button id="prevBtn">⏮</button>
+
+                <button id="playBtn" class="play-btn">
+                    ▶
+                </button>
+
+                <button id="nextBtn">⏭</button>
+
+            </div>
+
+            <audio id="musica">
+                <source src="assets/outravida.mp3" type="audio/mpeg">
+            </audio>
+
         </div>
 
-        <div class="polaroid polaroid-3">
-          <img src="assets/polaroid3.jpg" alt="">
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="timeline-section">
+
+        <h3>NOSSA LINHA DO TEMPO ♡</h3>
+
+        <div class="year">2024</div>
+
+        <div class="timeline">
+
+            <div class="timeline-item left">
+                <img src="assets/primeiraconversa.png">
+            </div>
+
+            <div class="timeline-item right">
+                <div class="card">
+                    <small>28 de Dezembro de 2024</small>
+                    <h4>PRIMEIRA CONVERSA</h4>
+                </div>
+            </div>
+
+            <div class="year-divider">
+                <span>2025</span>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>04 de Janeiro de 2025</small>
+                    <h4>CAFÉ DA MANHÃ NA VANDA</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/cafemanhavanda.png">
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>10 de Janeiro de 2025</small>
+                    <h4>PRIMEIRO BEIJO</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/foiemcasa.png">
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>11 de Fevereiro de 2025</small>
+                    <h4>ANIVERSÁRIO</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/aniversariopt2.png">
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>20 de Fevereiro de 2025</small>
+                    <h4>CARNAVAL</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/carnaval.png">
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>23 de Março de 2025</small>
+                    <h4>PÔR DO SOL NO MORRO</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/pordosolmorro.png">
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>04 de Abril de 2025</small>
+                    <h4>JANELA</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/janela.png">
+            </div>
+
+            <div class="year-divider">
+                <span>2026</span>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>28 de Janeiro de 2026</small>
+                    <h4>VOLTAMOOOOOO</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/voltamooo.png">
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>11 de Fevereiro de 2026</small>
+                    <h4>ANIVERSÁRIO</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/aniversarioalexandra.png">
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>14 de Fevereiro de 2026</small>
+                    <h4>CARNAVAL VINHEDO</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/carnavalvinhedo.png">
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>15 de Março de 2026</small>
+                    <h4>PEDIDO DE NAMORO</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/pedidodenamoro.png">
+            </div>
+
+            <div class="timeline-item left">
+                <div class="card">
+                    <small>22 de Março de 2026</small>
+                    <h4>RESTAURANTE SEVERO</h4>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <img src="assets/restaurantesevero.png">
+            </div>
+
         </div>
 
-      </div>
-
-      <div class="hero-text">
-
-        <h1>
-          FELIZ DIA DOS<br>
-          NAMORADOS
-        </h1>
-
-        <h3>NOSSO PRIMEIRO DIA 12 JUNTOS!</h3>
-
-        <img src="assets/tangled-logo.png" class="hero-logo" alt="">
-
-        <a href="#timeline" class="btn-historia">
-          Ler nossa história
+        <a href="index.html" class="btn-back">
+            Voltar para o início ♡
         </a>
 
-      </div>
+    </section>
 
-    </div>
-
-  </section>
-
-  <section class="music-player">
-
-    <div class="player-card">
-
-      <img
-        src="assets/player-cover.jpg"
-        class="player-cover"
-        alt=""
-      >
-
-      <div class="song-info">
-        <h2>Outra Vida</h2>
-        <span>Armandinho</span>
-      </div>
-
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-
-      <div class="controls">
-
-        <button>⏮</button>
-
-        <button class="play-button">
-          ▶
-        </button>
-
-        <button>⏭</button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section id="timeline" class="timeline-section">
-
-    <div class="timeline-title">
-      <span>NOSSA LINHA DO TEMPO</span>
-      <h2>2024</h2>
-    </div>
-
-    <div class="timeline">
-
-      <div class="timeline-item left">
-
-        <div class="timeline-card">
-          <span class="date">
-            21 de Dezembro de 2024
-          </span>
-
-          <h3>
-            PRIMEIRA<br>
-            CONVERSA
-          </h3>
-        </div>
-
-      </div>
-
-      <div class="timeline-item right">
-
-        <div class="timeline-card image-card">
-
-          <img src="assets/polaroid1.jpg" alt="">
-
-          <div>
-
-            <span class="date">
-              04 de Janeiro de 2025
-            </span>
-
-            <h3>
-              CAFÉ DA MANHÃ<br>
-              NA VANDA
-            </h3>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="timeline-item left">
-
-        <div class="timeline-card">
-
-          <span class="date">
-            10 de Janeiro de 2025
-          </span>
-
-          <h3>
-            PRIMEIRO<br>
-            BEIJO
-          </h3>
-
-        </div>
-
-      </div>
-
-      <div class="timeline-item right">
-
-        <div class="timeline-card image-card">
-
-          <img src="assets/polaroid2.jpg" alt="">
-
-          <div>
-
-            <span class="date">
-              11 de Fevereiro de 2025
-            </span>
-
-            <h3>
-              ANIVERSÁRIO
-            </h3>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="back-top">
-      <a href="#inicio">
-        Voltar para o início ↑
-      </a>
-    </div>
-
-  </section>
-
+    <script src="js/home.js"></script>
 </body>
 </html>

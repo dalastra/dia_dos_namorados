@@ -1,7 +1,7 @@
 /* =========================
    RESET
 ========================= */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
 *{
     margin:0;
     padding:0;
@@ -13,48 +13,42 @@ html{
 }
 
 body{
-    font-family:'Montserrat',sans-serif;
-    color:#fff;
-
-    background:
-    linear-gradient(
-        rgba(0,120,110,.85),
-        rgba(0,90,80,.95)
-    ),
-    url("../assets/fundologin.png");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+    font-family: Inter, Helvetica, sans-serif;
+    background:#08b8a8;
+    color:rgb(255, 255, 255);
+    overflow-x:hidden;
 }
 
 /* =========================
    NAVBAR
 ========================= */
 
-.topbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    background:#0ba392;
-    padding:18px 0;
-
-    backdrop-filter:blur(10px);
-}
-
 .navbar{
+    height:70px;
+    background:linear-gradient(
+        90deg,
+        #00CDAD,
+        #006C5B
+    );
     display:flex;
     justify-content:center;
-    gap:50px;
+    align-items:center;
+
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.navbar nav{
+    display:flex;
+    gap:70px;
 }
 
 .navbar a{
-    color:#fff;
+    color:rgb(255, 255, 255);
     text-decoration:none;
-    font-weight:700;
     font-size:14px;
-    transition:.3s;
+    font-weight:600;
 }
 
 .navbar a:hover{
@@ -66,61 +60,79 @@ body{
 ========================= */
 
 .hero{
-    min-height:750px;
     position:relative;
+    height:370px;
     overflow:hidden;
 }
 
-.hero-container{
-    width:1100px;
-    max-width:95%;
+.hero-bg{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.18;
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background: #43AD9C
+    url("../assets/fundoinicio.png");
+
+}
+
+.hero-content{
+    position:relative;
+    z-index:10;
+
+    max-width:1200px;
     margin:auto;
 
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
 
-    padding-top:90px;
+    padding:40px 80px;
 }
 
 /* =========================
    POLAROIDS
 ========================= */
 
-.polaroids{
+.hero-polaroids{
     position:relative;
-    width:600px;
-    height:400px;
+    width:450px;
+    height:220px;
 }
 
-.foto{
+.polaroid{
     position:absolute;
-    transition:.3s ease;
+    width: 400px;
 }
 
-.foto:hover{
-    transform:scale(1.04);
+.polaroid-1{
+    left: -100px;;
+    top:-100px;
+    transform:rotate(-8deg);
 }
 
-.foto1{
-    width:240px;
-    left:0;
+.polaroid-2{
+    right:-80px;
+    top: -70px;
+    transform:rotate(7deg);
+}
+
+.polaroid-3{
+    left:20px;
     top:20px;
-    transform:rotate(-12deg);
-}
-
-.foto2{
-    width:240px;
-    right:40px;
-    top:0;
-    transform:rotate(10deg);
-}
-
-.foto3{
-    width:270px;
-    left:150px;
-    top:120px;
-    z-index:10;
+    z-index:3;
 }
 
 /* =========================
@@ -128,170 +140,147 @@ body{
 ========================= */
 
 .hero-text{
-    max-width:450px;
+    text-align:left;
+    max-width:420px;
 }
 
 .hero-text h1{
-    font-size:64px;
-    line-height:1;
-    font-weight:800;
+    font-size:50px;
+    line-height:1.1;
+    font-weight:900;
 }
 
-.hero-text h3{
-    margin-top:15px;
-    font-size:20px;
-    font-weight:600;
+.hero-text h2{
+    margin-top:10px;
+    font-size:22px;
+    color:#ffffff;
 }
 
-.hero-logo{
-    width:120px;
-    margin:20px 0;
+.pascal-area img{
+    width:110px;
+    margin-top:5px;
 }
 
-.btn-historia{
+.btn-story{
     display:inline-block;
 
-    margin-top:10px;
+    margin-top:20px;
 
-    padding:14px 26px;
+    padding:12px 25px;
 
-    border-radius:999px;
+    border-radius:30px;
 
-    background:rgba(255,255,255,.2);
+    background:linear-gradient(
+        90deg,
+        #007866,
+        #00BFA2
+    );
 
-    color:#fff;
+    color:white;
     text-decoration:none;
-    font-weight:600;
-
-    transition:.3s;
-}
-
-.btn-historia:hover{
-    background:rgba(255,255,255,.3);
+    font-weight:bold;
 }
 
 /* =========================
    FOLHAS
 ========================= */
 
-.leaf-left,
-.leaf-right{
+.folha{
     position:absolute;
-    bottom:0;
-    width:220px;
-    z-index:5;
+    z-index:20;
 }
 
-.leaf-left{
-    left:0;
+.folha-left{
+    width:340px;
+
+    bottom:-40px;
+    left:-40px;
 }
 
-.leaf-right{
-    right:0;
+.folha-right{
+    width:340px;
+
+    bottom:-40px;
+    right:-40px;
 }
 
 /* =========================
    PLAYER
 ========================= */
 
-.music-player{
-    display:flex;
-    justify-content:center;
-
-    margin-top:-70px;
-
-    position:relative;
-    z-index:50;
+.music-section{
+    padding:80px 0 40px;
 }
 
-.player-card{
+.music-card{
     width:900px;
-    max-width:95%;
+    margin:auto;
 
-    background:#007f72;
-
-    padding:30px;
-
+    background:linear-gradient(
+        90deg,
+        #006C5B,
+        #00A68C
+    );
     border-radius:40px;
 
+    padding:35px;
+
     box-shadow:
-    0 20px 40px rgba(0,0,0,.25);
+    0 10px 30px rgba(0,0,0,.2);
 }
 
-.player-cover{
+.music-cover{
     width:100%;
-    height:340px;
+    height:320px;
 
     object-fit:cover;
 
-    border-radius:25px;
+    border-radius:30px;
 }
 
-.song-info{
+.music-info{
     margin-top:20px;
 }
 
-.song-info h2{
+.music-info h2{
     font-size:34px;
-    font-weight:700;
 }
 
-.song-info span{
-    opacity:.85;
+.music-info p{
+    opacity:.8;
 }
 
 .progress-bar{
     width:100%;
-    height:4px;
-
-    background:rgba(255,255,255,.25);
-
-    margin-top:20px;
-
-    border-radius:999px;
-}
-
-.progress{
-    width:45%;
-    height:100%;
-
-    background:#fff;
-
-    border-radius:999px;
-}
-
-.controls{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    gap:25px;
-
     margin-top:25px;
 }
 
-.controls button{
-    border:none;
-    background:none;
+.music-controls{
+    margin-top:20px;
 
-    color:#fff;
-
-    cursor:pointer;
-
-    font-size:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
 }
 
-.play-button{
+.music-controls button{
+    border:none;
+    background:none;
+    color:rgb(255, 255, 255);
+
+    font-size:22px;
+    cursor:pointer;
+}
+
+.play-btn{
     width:60px;
     height:60px;
 
     border-radius:50%;
 
-    background:#fff !important;
-
-    color:#007f72 !important;
-
-    font-size:24px;
+    background:white !important;
+    color:#007f73 !important;
 }
 
 /* =========================
@@ -299,32 +288,48 @@ body{
 ========================= */
 
 .timeline-section{
-    padding:80px 0;
+    position:relative;
+
+    padding:80px 0 120px;
+
+    background:
+        linear-gradient(
+            rgba(0,120,110,.78),
+            rgba(104, 167, 161, 0.78)
+        ),
+        url("../assets/fundolinhadotempo.png");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
-.timeline-title{
+.timeline-section h3{
     text-align:center;
-    margin-bottom:60px;
+
+    font-size:28px;
+    font-weight:700;
+
+    margin-bottom:15px;
 }
 
-.timeline-title span{
-    font-size:14px;
-    letter-spacing:2px;
-}
+.year{
+    text-align:center;
 
-.timeline-title h2{
     font-size:60px;
-    font-weight:800;
+    font-weight:900;
+
+    margin-bottom:50px;
 }
 
 .timeline{
     position:relative;
 
-    width:1100px;
-    max-width:95%;
-
+    max-width:1100px;
     margin:auto;
 }
+
+/* Linha central */
 
 .timeline::before{
     content:"";
@@ -333,12 +338,16 @@ body{
 
     left:50%;
     top:0;
-    bottom:0;
+
+    transform:translateX(-50%);
 
     width:4px;
+    height:100%;
 
-    background:#fff;
+    background:rgb(255, 255, 255);
 }
+
+/* Itens */
 
 .timeline-item{
     position:relative;
@@ -351,112 +360,234 @@ body{
 }
 
 .timeline-item.left{
+    left:0;
     text-align:right;
 }
 
 .timeline-item.right{
     left:50%;
+    text-align:left;
 }
 
-.timeline-item::after{
+/* Bolinhas */
+
+.timeline-item::before{
     content:"";
 
     position:absolute;
 
-    width:18px;
-    height:18px;
+    width:16px;
+    height:16px;
 
-    background:#fff;
+    background:rgb(255, 255, 255);
 
     border-radius:50%;
 
-    top:25px;
+    top:50%;
 }
 
-.timeline-item.left::after{
-    right:-9px;
+.timeline-item.left::before{
+    right:-8px;
 }
 
-.timeline-item.right::after{
-    left:-9px;
+.timeline-item.right::before{
+    left:-8px;
 }
 
-.timeline-card{
+/* Cards */
+
+.card{
     display:inline-block;
-
-    background:#006f65;
-
-    padding:20px;
-
-    border-radius:15px;
 
     min-width:260px;
 
+    padding:18px;
+
+    border-radius:12px;
+
+    background:#016F5E;
+
     box-shadow:
-    0 10px 25px rgba(0,0,0,.25);
+        0 5px 15px rgba(0,0,0,.15);
 }
 
-.timeline-card h3{
-    margin-top:8px;
-    font-size:22px;
-}
+.card small{
+    display:block;
 
-.date{
-    font-size:12px;
+    font-size:11px;
+
+    margin-bottom:6px;
+
     opacity:.8;
 }
 
-.image-card{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.card h4{
+    font-size:24px;
+    font-weight:800;
 }
 
-.image-card img{
-    width:90px;
-    height:90px;
+/* Fotos */
+
+.timeline-item img{
+    width:220px;
+    height:140px;
 
     object-fit:cover;
 
     border-radius:10px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.25);
+}
+
+/* Anos */
+
+.year-divider{
+    position:relative;
+
+    text-align:center;
+
+    margin:60px 0;
+}
+
+.year-divider span{
+    position:relative;
+
+    z-index:2;
+
+    font-size:58px;
+    font-weight:900;
+
+    padding:0 25px;
+}
+
+/* =========================
+   BOTÃO FINAL
+========================= */
+
+.btn-back{
+    display:block;
+
+    width:max-content;
+
+    margin:80px auto 0;
+
+    padding:14px 28px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        90deg,
+        #007866,
+        #00BFA2
+    );
+
+    color:rgb(255, 255, 255);
+
+    text-decoration:none;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.btn-back:hover{
+    transform:translateY(-3px);
+
+    background:#00d8c7;
 }
 
 /* =========================
    RESPONSIVO
 ========================= */
 
-@media(max-width:900px){
+@media(max-width:1100px){
 
-    .hero-container{
+    .hero-content{
         flex-direction:column;
-        text-align:center;
         gap:40px;
     }
 
+    .hero{
+        height:auto;
+        padding-bottom:120px;
+    }
+
+    .music-card{
+        width:90%;
+    }
+
     .timeline::before{
-        left:20px;
+        left:30px;
     }
 
-    .timeline-item,
-    .timeline-item.right{
+    .timeline-item{
         width:100%;
-        left:0;
 
-        text-align:left;
+        padding-left:80px;
+        padding-right:20px;
 
-        padding-left:60px;
+        text-align:left !important;
+
+        left:0 !important;
     }
 
-    .timeline-item::after{
-        left:11px !important;
+    .timeline-item::before{
+        left:22px !important;
+        right:auto !important;
     }
 
-    .polaroids{
+    .timeline-item img{
         width:100%;
-        max-width:500px;
+        max-width:300px;
+    }
+
+    .year-divider span{
+        font-size:42px;
+    }
+}
+
+@media(max-width:768px){
+
+    .navbar nav{
+        gap:25px;
+    }
+
+    .hero-polaroids{
+        transform:scale(.8);
     }
 
     .hero-text h1{
-        font-size:48px;
+        font-size:38px;
     }
+
+    .hero-text h2{
+        font-size:18px;
+    }
+
+    .music-cover{
+        height:220px;
+    }
+
+    .music-info h2{
+        font-size:24px;
+    }
+
+    .year{
+        font-size:42px;
+    }
+
+    .card h4{
+        font-size:18px;
+    }
+}
+
+
+.progress-bar{
+    width:100%;
+
+    margin-top:20px;
+
+    cursor:pointer;
+
+    accent-color: #ffffff;
 }
