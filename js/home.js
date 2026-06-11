@@ -66,3 +66,27 @@ audio.addEventListener("ended", () => {
 
     progressBar.value = 0;
 });
+
+const navInicio = document.getElementById("navInicio");
+const navTimeline = document.getElementById("navTimeline");
+
+window.addEventListener("scroll", () => {
+
+    const timeline =
+        document.getElementById("timeline");
+
+    const timelineTop =
+        timeline.offsetTop - 200;
+
+    if(window.scrollY >= timelineTop){
+
+        navInicio.classList.remove("active");
+        navTimeline.classList.add("active");
+
+    }else{
+
+        navTimeline.classList.remove("active");
+        navInicio.classList.add("active");
+    }
+
+});
