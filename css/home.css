@@ -461,7 +461,11 @@ body{
 
     border-radius:12px;
 
-    background:#016F5E;
+    background:linear-gradient(
+        90deg,
+        #007866,
+        #00BFA2
+    );
 
     box-shadow:
         0 5px 15px rgba(0,0,0,.15);
@@ -723,4 +727,33 @@ body{
     display:block;
 
     filter:drop-shadow(0 10px 25px rgba(0,0,0,.25));
+}
+
+.year-divider{
+    position: relative;
+    z-index: 10;
+}
+
+.year-divider::before{
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 16%;
+    height: 100%;
+
+    border-radius: 12px;
+
+    background:linear-gradient(
+        90deg,
+        #007866,
+        #00BFA2
+    );
+
+    z-index: -1;
 }
